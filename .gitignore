@@ -1,0 +1,19 @@
+# Resultados generados (no versionados)
+output/*.xlsx
+
+# Archivos de entorno R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# renv (mantener renv.lock y renv/activate.R en git)
+renv/library/
+renv/local/
+renv/staging/
+renv/cellar/
+renv/sandbox/
+
+# Sistema
+.DS_Store
+Thumbs.db

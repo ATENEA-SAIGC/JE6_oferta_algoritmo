@@ -1,0 +1,86 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+REPORTE DE VALIDACION - MODULARIZACION DE ALGORITMOS DE SELECCION
+Agencia Distrital para la Educacion Superior, la Ciencia y la Tecnologia - ATENEA
+Subgerencia de Analisis de Informacion y Gestion del Conocimiento (SAIGC)
+
+Fecha de generacion :  2026-11-06 10:30:04 
+Version de R        :  R version 4.6.1 (2026-06-24) 
+Plataforma          :  x86_64-apple-darwin23.6.0 
+
+============================================================================================ 
+METODO DE VALIDACION 
+============================================================================================ 
+
+Para cada algoritmo se realizan DOS comparaciones independientes:
+
+  (A) MODULAR vs ORIGINAL
+      Se ejecuta el script monolitico original (con la unica modificacion de
+      apuntar el setwd() a una copia de trabajo local) y la version modular,
+      en el mismo equipo, la misma version de R y las mismas librerias.
+      Esta comparacion aisla el efecto de la modularizacion.
+
+  (B) MODULAR vs ARCHIVO DE REFERENCIA
+      Se compara la salida de la version modular contra el libro Excel
+      entregado originalmente por el area. Esta comparacion verifica la
+      reproducibilidad completa del calculo.
+
+En ambos casos la comparacion es CELDA POR CELDA sobre todas las hojas, filas
+y columnas del libro. Los valores numericos se comparan con una tolerancia de
+1e-9 y los ausentes (NA) se consideran iguales entre si.
+
+============================================================================================ 
+JE6 Oferta (Jovenes a la E 6 - linea General) 
+============================================================================================ 
+
+  (A) COMPARACION MODULAR vs ORIGINAL
+-------------------------------------------------------------------------------------------- 
+
+   ORIGINAL  (script monolitico) 
+       JE6_OFERTA_VF_20261106.xlsx 
+   vs  MODULAR   (Main.R + modules/) 
+       JE6_OFERTA_VF_20261106.xlsx 
+
+   HOJA                       FILAS          COLUMNAS    RESULTADO
+   -------------------------------------------------------------------------------------- 
+   JE6_PROGRAMAS              668            37          IDENTICA
+   OFERTA_DETALLE_COSTO       37.302         19          IDENTICA
+   PPTO_GLOBAL                4              14          IDENTICA
+   PPTO_ATENEA_VIGENCIA       7              5           IDENTICA
+   PPTO_IES                   39             12          IDENTICA
+   IES_NIVEL                  51             9           IDENTICA
+   EXCEDENTE_NIVEL            2              4           IDENTICA
+   -------------------------------------------------------------------------------------- 
+   TOTAL DE CELDAS DIFERENTES: 0   -->   LOS DOS ARCHIVOS SON IDENTICOS
+
+  (B) COMPARACION MODULAR vs ARCHIVO DE REFERENCIA
+-------------------------------------------------------------------------------------------- 
+
+   REFERENCIA (entregada por el area) 
+       referencia_JE6.xlsx 
+   vs  MODULAR    (corrida de validacion) 
+       JE6_OFERTA_VF_20261106.xlsx 
+
+   HOJA                       FILAS          COLUMNAS    RESULTADO
+   -------------------------------------------------------------------------------------- 
+   JE6_PROGRAMAS              668            37          IDENTICA
+   OFERTA_DETALLE_COSTO       37.302         19          IDENTICA
+   PPTO_GLOBAL                4              14          IDENTICA
+   PPTO_ATENEA_VIGENCIA       7              5           IDENTICA
+   PPTO_IES                   39             12          IDENTICA
+   IES_NIVEL                  51             9           IDENTICA
+   EXCEDENTE_NIVEL            2              4           IDENTICA
+   -------------------------------------------------------------------------------------- 
+   TOTAL DE CELDAS DIFERENTES: 0   -->   LOS DOS ARCHIVOS SON IDENTICOS
+
+============================================================================================ 
+CONCLUSION 
+============================================================================================ 
+
+  Comparaciones realizadas :  2 
+  Celdas diferentes        :  0 
+
+  Las versiones modulares reproducen EXACTAMENTE los resultados del script
+  original y de los archivos de referencia entregados por el area.
+  No se identifico ninguna diferencia.
+
+============================================================================================ 
