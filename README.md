@@ -279,7 +279,7 @@ $$Demanda\_Social_{CINE_i} = \frac{Inscritos\ en\ CINE\ F\ detallado\ i}{Cupos\ 
 | Semilla | `set.seed(20260427)` | `set.seed(20261008)` |
 | Salida | XLSX con 4 hojas | XLSX con 7 hojas |
 
-> El repositorio JE5 publicable se encuentra en [ATENEA-Analitica/JE5_oferta_algoritmo](https://github.com/ATENEA-Analitica/JE5_oferta_algoritmo).
+> El repositorio JE5 publicable se encuentra en [ATENEA-SAIGC/JE5_oferta_algoritmo](https://github.com/ATENEA-SAIGC/JE5_oferta_algoritmo).
 
 ---
 
